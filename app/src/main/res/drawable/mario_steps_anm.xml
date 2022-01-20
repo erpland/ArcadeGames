@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/mario1" android:duration="50"/>
+    <item android:drawable="@drawable/mario2" android:duration="50"/>
+    <item android:drawable="@drawable/mario3" android:duration="50"/>
+    <item android:drawable="@drawable/mario4" android:duration="50"/>
+    <item android:drawable="@drawable/mario5" android:duration="50"/>
+    <item android:drawable="@drawable/mario6" android:duration="50"/>
+    <item android:drawable="@drawable/mario7" android:duration="50"/>
+    <item android:drawable="@drawable/mario8" android:duration="50" android:rotationX="180"/>
+</animation-list>

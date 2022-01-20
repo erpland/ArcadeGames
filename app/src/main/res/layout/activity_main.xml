@@ -4,15 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/background"
+    android:foregroundTint="@color/accent"
+    tools:layout_editor_absoluteX="-2dp"
+    tools:layout_editor_absoluteY="-47dp">
 
-    <TextView
+    <ImageView
+        android:id="@+id/leftSvg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/middleSvg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_creture"
+        app:tint="@color/accent" />
+
+    <ImageView
+        android:id="@+id/middleSvg"
+        android:layout_width="75dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="136dp"
+        app:layout_constraintEnd_toStartOf="@+id/rightSvg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/leftSvg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_creture"
+        app:tint="@color/accent_red" />
+
+    <ImageView
+        android:id="@+id/rightSvg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="93dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/middleSvg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_creture"
+        app:tint="@color/accent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:constraint_referenced_ids="leftSvg,middleSvg,rightSvg"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-47dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Arcade Game"
+        android:textAlignment="center"
+        android:textColor="@color/white_text"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middleSvg" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/orbitron_medium"
+        android:text="by ORI WINBOIM"
+        android:textColor="@color/accent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/vBtnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="93dp"
+        android:width="130dip"
+        android:fontFamily="@font/press_start_2p"
+        android:gravity="bottom|center_horizontal|center_vertical"
+        android:text="@string/login"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="@color/white_text"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="@color/white_text"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/vBtnSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="40dp"
+        android:width="130dip"
+        android:fontFamily="@font/press_start_2p"
+        android:gravity="bottom|center_horizontal|center_vertical"
+        android:text="@string/signup"
+        app:cornerRadius="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vBtnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vBtnLogin"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="@color/white_text"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="@color/white_text"
+        app:strokeWidth="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

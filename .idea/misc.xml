@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_creture.xml" value="0.403125" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_email.xml" value="0.23489583333333333" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_lock.xml" value="0.23489583333333333" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_user.xml" value="0.23489583333333333" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/inputs.xml" value="0.23489583333333333" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_street_driver.xml" value="0.38697916666666665" />
       </map>
     </option>

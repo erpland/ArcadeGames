@@ -8,10 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background">#071A5E</color>
-    <color name="text">#F2F2F2</color>
+    <color name="white_text">#F2F2F2</color>
+    <color name="gold_text">#FFEB3B</color>
     <color name="hints">#66F2F2F2</color>
     <color name="accent">#61F2D9</color>
     <color name="accent_red">#FF494B</color>
     <color name="transparent">#00000000</color>
-    FF494B
+
 </resources>
