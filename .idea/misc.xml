@@ -3,16 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en1_attack_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en1_hit_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en1_walk_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en2_attack_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en2_hit_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en2_walk_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en3_attack_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en3_hit_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/en3_walk_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_coin_crown.xml" value="0.23385416666666667" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_creture.xml" value="0.403125" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_email.xml" value="0.23489583333333333" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_lock.xml" value="0.23489583333333333" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_phone.xml" value="0.403125" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_user.xml" value="0.23489583333333333" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/ic_yellow_car.xml" value="0.23385416666666667" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/inputs.xml" value="0.23489583333333333" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/life_bar.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/player_attack_anm.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/player_die_anmt.xml" value="0.2064814814814815" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/drawable/player_hit_anm.xml" value="0.2064814814814815" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_login.xml" value="0.5" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_number_master.xml" value="0.22" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_register.xml" value="0.5" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_seven_boom.xml" value="0.38697916666666665" />
         <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/activity_street_driver.xml" value="0.38697916666666665" />
+        <entry key="..\:/-=android=-/ArcadeGames/app/src/main/res/layout/fragment_end_game.xml" value="0.21770833333333334" />
       </map>
     </option>
   </component>

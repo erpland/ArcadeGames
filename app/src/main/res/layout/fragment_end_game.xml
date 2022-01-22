@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#94000000"
     tools:context=".EndGameFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tv_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/press_start_2p"
+        android:paddingTop="15dp"
+        android:text="Game Over"
+        android:textColor="#FFD700"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_subText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btn_tryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Try Again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_goBack"
+        app:layout_constraintStart_toStartOf="@+id/tv_subText"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subText" />
+
+    <TextView
+        android:id="@+id/tv_subText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Score:"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_tryAgain"
+        app:layout_constraintEnd_toEndOf="@+id/tv_headline"
+        app:layout_constraintStart_toStartOf="@+id/tv_headline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_headline"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <Button
+        android:id="@+id/btn_goBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Go Back"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_tryAgain"
+        app:layout_constraintEnd_toEndOf="@+id/tv_subText"
+        app:layout_constraintStart_toEndOf="@+id/btn_tryAgain"
+        app:layout_constraintTop_toTopOf="@+id/btn_tryAgain" />
+</androidx.constraintlayout.widget.ConstraintLayout>

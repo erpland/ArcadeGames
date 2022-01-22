@@ -8,117 +8,123 @@
     tools:context=".HomeActivity">
 
     <TextView
-        android:id="@+id/tv_username"
+        android:id="@+id/tv_userGreet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="TextView"
+        android:text="Welcome User"
         android:textColor="@color/white_text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Choose A Game"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tv_userGreet"
+        app:layout_constraintStart_toStartOf="@+id/tv_userGreet"
+        app:layout_constraintTop_toBottomOf="@+id/tv_userGreet" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_username">
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.3">
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_sevenBoom"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/mario1" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_sevenBoom"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                app:cardBackgroundColor="@color/transparent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Seven Boom!"
+                android:textColor="@color/gold_text"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    app:srcCompat="@drawable/mario1" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_NumbeMaster"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card_sevenBoom"
+            app:layout_constraintTop_toTopOf="@+id/card_sevenBoom">
 
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:fontFamily="@font/press_start_2p"
-                    android:text="Seven Boom!"
-                    android:textColor="@color/white_text"
-                    android:textSize="16dp" />
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:rotationY="180"
+                app:srcCompat="@drawable/attack3" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_NumbeMaster"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="8dp"
-                app:cardBackgroundColor="@color/transparent"
-                app:layout_constraintEnd_toEndOf="@+id/card_sevenBoom"
-                app:layout_constraintStart_toStartOf="@+id/card_sevenBoom"
-                app:layout_constraintTop_toBottomOf="@+id/card_sevenBoom">
+            <TextView
+                android:id="@+id/tv_subText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Number Master"
+                android:textColor="@color/gold_text" />
+        </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    app:srcCompat="@drawable/mario1" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_turboRacer"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/card_NumbeMaster"
+            app:layout_constraintStart_toStartOf="@+id/card_sevenBoom"
+            app:layout_constraintTop_toBottomOf="@+id/card_sevenBoom">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:fontFamily="@font/press_start_2p"
-                    android:text="Number Master"
-                    android:textColor="@color/white_text"
-                    android:textSize="16dp" />
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="220dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/sidecar" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_turboRacer"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="8dp"
-                app:cardBackgroundColor="@color/transparent"
-                app:layout_constraintEnd_toEndOf="@+id/card_NumbeMaster"
-                app:layout_constraintStart_toStartOf="@+id/card_NumbeMaster"
-                app:layout_constraintTop_toBottomOf="@+id/card_NumbeMaster">
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    app:srcCompat="@drawable/mario1" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:fontFamily="@font/press_start_2p"
-                    android:text="Turbo Racer"
-                    android:textColor="@color/white_text"
-                    android:textSize="16dp" />
-            </androidx.cardview.widget.CardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Street Driver"
+                android:textColor="@color/gold_text"
+                android:textSize="16dp" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -58,7 +58,7 @@
         tools:layout_editor_absoluteY="-47dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/middleSvg" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_subText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -85,10 +85,10 @@
         android:text="by ORI WINBOIM"
         android:textColor="@color/accent"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/tv_headline"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/tv_headline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_headline" />
 
     <Button
         android:id="@+id/vBtnLogin"

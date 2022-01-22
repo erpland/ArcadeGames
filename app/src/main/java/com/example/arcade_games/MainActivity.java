@@ -14,15 +14,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MediaPlayer music;
     ImageView middleCreture, leftCreture, rightCreture;
     Button loginBtn, signupBtn;
-    //TODO:Music
-    //TODO:full Screen
-    //TODO:Orientation
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 //        getSupportActionBar().hide();
+        MusicPlayer.musicPlayer(MainActivity.this,R.raw.main_music);
 
         //איתחול
         InitViews();
