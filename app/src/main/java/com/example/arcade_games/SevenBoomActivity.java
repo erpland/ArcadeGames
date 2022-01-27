@@ -8,6 +8,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
@@ -49,6 +50,7 @@ public class SevenBoomActivity extends AppCompatActivity implements View.OnClick
     public void onBackPressed() {
         super.onBackPressed();
         MusicPlayer.player.stop();
+        startActivity(new Intent(SevenBoomActivity.this,HomeActivity.class));
     }
 
     @Override

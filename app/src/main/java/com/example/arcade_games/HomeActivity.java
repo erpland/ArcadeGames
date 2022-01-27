@@ -6,6 +6,8 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,22 +22,28 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     DatabaseReference myRef;
     FirebaseAuth mAuth;
 
-    boolean isFirstRun=true;
-
-    CardView sevenBoomCrd,numberMasterCrd,turboRacerCrd;
+    boolean isFirstRun = true;
+    Button logoutBtn;
+    CardView sevenBoomCrd, numberMasterCrd, turboRacerCrd;
     TextView userGreetTv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-
         initViews();
         initVars();
         greetUser();
         sevenBoomCrd.setOnClickListener(this);
         numberMasterCrd.setOnClickListener(this);
         turboRacerCrd.setOnClickListener(this);
+        logoutBtn.setOnClickListener(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+
     }
 
     private void greetUser() {
@@ -45,6 +53,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 User value = dataSnapshot.getValue(User.class);
                 userGreetTv.setText("Welcome, " + value.getNickname());
             }
+
             @Override
             public void onCancelled(DatabaseError error) {
                 // Failed to read value
@@ -57,7 +66,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         numberMasterCrd = findViewById(R.id.card_NumbeMaster);
         turboRacerCrd = findViewById(R.id.card_turboRacer);
         userGreetTv = findViewById(R.id.tv_userGreet);
+        logoutBtn = findViewById(R.id.btn_logout);
     }
+
     private void initVars() {
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -68,24 +79,30 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         MusicPlayer.player.pause();
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.card_sevenBoom:
-                startActivity(new Intent(HomeActivity.this,SevenBoomActivity.class));
+                startActivity(new Intent(HomeActivity.this, SevenBoomActivity.class));
                 break;
             case R.id.card_NumbeMaster:
-                startActivity(new Intent(HomeActivity.this,NumberMasterActivity.class));
+                startActivity(new Intent(HomeActivity.this, NumberMasterActivity.class));
                 break;
             case R.id.card_turboRacer:
-                startActivity(new Intent(HomeActivity.this,StreetDriverActivity.class));
+                startActivity(new Intent(HomeActivity.this, StreetDriverActivity.class));
+                break;
+            case R.id.btn_logout:
+                if (mAuth != null)
+                    mAuth.signOut();
+                startActivity(new Intent(HomeActivity.this, MainActivity.class));
                 break;
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if(!MusicPlayer.player.isPlaying())
-            MusicPlayer.musicPlayer(HomeActivity.this,R.raw.main_music);
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+//        if(!MusicPlayer.player.isPlaying())
+        MusicPlayer.musicPlayer(HomeActivity.this, R.raw.main_music);
+//    }
     }
 }

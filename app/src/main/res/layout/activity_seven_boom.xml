@@ -86,7 +86,7 @@
             android:inputType="numberSigned"
             android:minHeight="48dp"
             android:shadowColor="#CDDC39"
-            android:text="0000"
+            android:text="0"
             android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

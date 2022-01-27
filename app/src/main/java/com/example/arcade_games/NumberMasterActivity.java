@@ -22,7 +22,6 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class NumberMasterActivity extends AppCompatActivity implements View.OnClickListener,CallBackInterface {
-    //TODO: fix double click
     ImageView playerImg, enemyImg;
     Button goBtn;
     EditText guessEt;
@@ -55,6 +54,7 @@ public class NumberMasterActivity extends AppCompatActivity implements View.OnCl
     public void onBackPressed() {
         super.onBackPressed();
         MusicPlayer.player.stop();
+        startActivity(new Intent(NumberMasterActivity.this,HomeActivity.class));
     }
 
     @Override
@@ -176,9 +176,10 @@ public class NumberMasterActivity extends AppCompatActivity implements View.OnCl
         } else {
             MusicPlayer.player.stop();
             soundFx.play(gameWinSound, 1, 1, 1, 0, 1);
-            goBtn.setClickable(false);
+
             endGame("You Win!", "Good Job Try Again!");
         }
+        goBtn.setClickable(false);
     }
     private void userWrongGuess() {
         livesLeft--;

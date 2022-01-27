@@ -10,22 +10,36 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    MediaPlayer music;
     ImageView middleCreture, leftCreture, rightCreture;
     Button loginBtn, signupBtn;
+    FirebaseAuth mAuth;
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        MusicPlayer.player.stop();
+    }
+
+    //TODO:music stop on minimaize
+    //TODO:icon
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        getSupportActionBar().hide();
-        MusicPlayer.musicPlayer(MainActivity.this,R.raw.main_music);
 
-        //איתחול
+        MusicPlayer.musicPlayer(MainActivity.this, R.raw.main_music);
+        mAuth = FirebaseAuth.getInstance();
+
         InitViews();
         initAnimations();
-//        initMusic();
+
 
         signupBtn.setOnClickListener(this);
         loginBtn.setOnClickListener(this);
@@ -33,10 +47,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-//    private void initMusic() {
-//        music = MediaPlayer.create(MainActivity.this, R.raw.main_music);
-//        music.start();
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        if(         ) {
+//            MusicPlayer.player.pause();
+//        }
 //    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MusicPlayer.player.start();
+    }
 
     private void initAnimations() {
         middleCreture.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.creture_center_anm));
@@ -52,13 +75,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signupBtn = findViewById(R.id.vBtnSignup);
     }
 
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        music.stop();
-//        music.release();
-//
-//    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (mAuth.getCurrentUser() != null)
+            startActivity(new Intent(MainActivity.this,HomeActivity.class));
+    }
 
     @Override
     public void onClick(View v) {

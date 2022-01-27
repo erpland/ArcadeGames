@@ -62,6 +62,7 @@ public class StreetDriverActivity extends AppCompatActivity implements View.OnTo
     public void onBackPressed() {
         super.onBackPressed();
         MusicPlayer.player.stop();
+        startActivity(new Intent(StreetDriverActivity.this,HomeActivity.class));
     }
 
     @Override
@@ -193,7 +194,6 @@ public class StreetDriverActivity extends AppCompatActivity implements View.OnTo
                             int min = (int) leftGuide.getX();
                             int max = (int)rightGuide.getX() - itemsParms.width;
 
-                            //TODO:bybass min,max == 0 on first run
                             int randomX = min != 0?rnd.nextInt((max - min) + 1) + min:screenWidth / 2 - itemsParms.width / 2;
 
                             item = new ImageView(StreetDriverActivity.this);
