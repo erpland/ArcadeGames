@@ -39,7 +39,8 @@ public class User {
             return;
         }
         if(phoneNumber.length() < 9 || phoneNumber.length() > 12){
-            toast("Phone Number Must Be Between 9 And 10 Numbers");
+            toast("Phone Number Must Be Between 9 And 11 Numbers");
+            return;
         }
         this.phoneNumber = phoneNumber;
     }

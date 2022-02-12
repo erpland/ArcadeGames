@@ -62,6 +62,10 @@ public class StreetDriverActivity extends AppCompatActivity implements View.OnTo
     public void onBackPressed() {
         super.onBackPressed();
         MusicPlayer.player.stop();
+        itemsTimer.cancel();
+        collisionTimer.cancel();
+        isRunning = false;
+        finishAffinity();
         startActivity(new Intent(StreetDriverActivity.this,HomeActivity.class));
     }
 
