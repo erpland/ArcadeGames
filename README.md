@@ -1,5 +1,5 @@
 # ArcadeGames- Android - JAVA
-Creative take on 3 simple arcade games with animations and fragments.
+Creative take on 3 simple arcade games with animations, fragments and threads.
 Includes Register/Login using Firebase Auth and Realtime DB as server.
 
 # Street Driver
